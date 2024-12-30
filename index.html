@@ -2,22 +2,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Wiki Clone</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
+      <!-- Container para a interface do usuário -->
       <div class="header-container">
         <h1>Search Wikipedia</h1>
-        <span id="theme-toggler">Light</span>
+        <span id="theme-toggler" aria-label="Toggle Theme">Light</span>
       </div>
 
-      <form id="search-form">
-        <input type="text" id="search-input" placeholder="Enter search term" />
-        <button type="submit">Search</button>
+      <form id="search-form" aria-label="Search Wikipedia">
+        <input type="text" id="search-input" placeholder="Enter search term" aria-label="Search term" />
+        <button type="submit" aria-label="Search">Search</button>
       </form>
 
-      <div id="search-results"></div>
+      <!-- Div onde os resultados da pesquisa serão exibidos -->
+      <div id="search-results" aria-live="polite"></div>
     </div>
 
     <script src="script.js"></script>
